@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
+---
+<BaseLayout title="Experience - Nikhil Akiti">
+	<section class="page-title-section">
+		<h1>Work Experience</h1>
+		<p>
+			A timeline of my professional roles, highlighting my growth in
+			<strong>software development</strong> and <em>team collaboration</em>.
+		</p>
+	</section>
+
+	<section class="experience-section">
+		<ExperienceCard
+			role="Software Engineering Intern"
+			company="UCSD IT Serivces"
+			date="May 2025 - Present"
+		>
+			<li>
+				Engineered a major version upgrade of a custom JupyterHub platform,
+				orchestrating the deployment on Kubernetes using Helm/Helmfile and
+				Docker, enhancing security for 1000+ UCSD students by patching legacy
+				CVEs
+			</li>
+			<li>
+				Resolved migration failures during JupyterHub upgrade, including function
+				conflicts and a refactor of the legacy Python Jinja2/Bootstrap
+				front-end templates, ensuring 100% feature compatibility and UI
+				consistency.
+			</li>
+			<li>
+				Automated Python SonarQube integration into Bamboo CI/CD pipeline
+				using custom Bash scripts for environment setup, SSL trust
+				configuration, and dependency management; authored clear internal
+				documentation to support maintainability
+			</li>
+		</ExperienceCard>
+
+		<ExperienceCard
+			role="Undergraduate Research Assistant"
+			company="UCSD CSE"
+			date="Sep 2023 - Jun 2024"
+		>
+			<li>
+				Co-authored the paper Generic Refinement Types, by implementing and
+				debugging a modified Rust object-relational mapping library that added
+				generic refinements to functions and types
+			</li>
+			<li>
+				Built web apps using the Rocket.rs web framework, Diesel ORM, and
+				PostgreSQL that implemented CRUD functionality, JSON data, and cookies
+				that served as testbeds for the refinement type checker
+			</li>
+			<li>
+				Migrated 3 web applications developed in Haskell to Rust and navigated
+				differences in programming structures by rewriting monadic error
+				handling to leverage Rust’s native Result and Option types for
+				improved safety.
+			</li>
+		</ExperienceCard>
+	</section>
+</BaseLayout>

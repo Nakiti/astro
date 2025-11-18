@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+<BaseLayout title="Projects - Nikhil Akiti">
+	<section class="page-title-section">
+		<h1>My Projects</h1>
+		<p>
+			A selection of my work, from <strong>full-stack web applications</strong>
+			to <em>ai projects</em>.
+		</p>
+	</section>
+	<section class="project-card-container">
+		<ProjectCard
+			href="/projects"
+			imgSrc="/assets/medium/claimable-1.png"
+			imgSrcSet="/assets/small/claimable-1.png 400w, /assets/medium/claimable-1.png 800w, /assets/large/claimable-1.png 1200w"
+			imgSizes="(min-width: 768px) 33vw, 100vw"
+			imgAlt="A screenshot of the Claimable AI project interface"
+			title="Claimable AI"
+			bgColor="#DDD6FE"
+			transitionName="project-claimable"
+		/>
+		<ProjectCard
+			href="/projects"
+			imgSrc="/assets/medium/fulfill-1.png"
+			imgSrcSet="/assets/small/fulfill-1.png 400w, /assets/medium/fulfill-1.png 800w, /assets/large/fulfill-1.png 1200w"
+			imgSizes="(min-width: 768px) 33vw, 100vw"
+			imgAlt="Screenshot of Fulfill AI Project"
+			title="Fulfill AI"
+			bgColor="#FED7AA"
+		/>
+		<ProjectCard
+			href="/projects"
+			imgSrc="/assets/medium/ecommerce-1.png"
+			imgSrcSet="/assets/small/ecommerce-1.png 400w, /assets/medium/ecommerce-1.png 800w, /assets/large/ecommerce-1.png 1200w"
+			imgSizes="(min-width: 768px) 33vw, 100vw"
+			imgAlt="Screenshot of Ecommerce Scraper Project"
+			title="Ecommerce Web Scraper"
+			bgColor="#FBCFE8"
+		/>
+		<ProjectCard
+			href="/projects"
+			imgSrc="/assets/medium/fundraising-1.png"
+			imgSrcSet="/assets/small/fundraising-1.png 400w, /assets/medium/fundraising-1.png 800w, /assets/large/fundraising-1.png 1200w"
+			imgSizes="(min-width: 768px) 33vw, 100vw"
+			imgAlt="Screenshot of Non Profit CRM Project"
+			title="Non Profit CRM"
+			bgColor="#A7F3D0"
+		/>
+		<ProjectCard
+			href="/projects"
+			imgSrc="/assets/medium/mash-1.png"
+			imgSrcSet="/assets/small/mash-1.png 400w, /assets/medium/mash-1.png 800w, /assets/large/mash-1.png 1200w"
+			imgSizes="(min-width: 768px) 33vw, 100vw"
+			imgAlt="Screenshot of Mash Project"
+			title="Mash"
+			bgColor="#BFDBFE"
+		/>
+		<ProjectCard
+			href="/projects"
+			imgSrc="/assets/medium/forscale-1.png"
+			imgSrcSet="/assets/small/forscale-1.jpg 400w, /assets/medium/forscale-1.jpg 800w, /assets/large/forscale-1.jpg 1200w"
+			imgSizes="(min-width: 768px) 33vw, 100vw"
+			imgAlt="Screenshot of For Scale Project"
+			title="For Scale"
+			bgColor="#FDE68A"
+		/>
+	</section>
+</BaseLayout>

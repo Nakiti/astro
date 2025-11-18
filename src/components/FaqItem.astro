@@ -1,0 +1,12 @@
+---
+export interface Props {
+	question: string;
+}
+const { question } = Astro.props;
+---
+<details class="faq-item">
+	<summary class="faq-question">{question}</summary>
+	<div class="faq-answer">
+		<slot />
+	</div>
+</details>

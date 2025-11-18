@@ -1,16 +1,75 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Nikhil Akiti's Portfolio">
+	<section class="hero-section">
+		<div class="hero-container">
+			<div class="hero-main-content">
+				<div class="hero-name-stack">
+					<p class="hero-intro">Hi, I'm</p>
+					<h1 class="hero-name">
+						<span class="hero-name-first">Nikhil</span>
+						<span class="hero-name-last">Akiti</span>
+					</h1>
+				</div>
+				<div class="hero-actions">
+					<!-- Note the updated link -->
+					<a class="hero-button hero-button-primary" href="/projects">View My Projects</a>
+					<a class="hero-button hero-button-secondary" href="resume.pdf">My Resume</a>
+				</div>
+			</div>
+			<p class="hero-description">
+				A passionate and detail-oriented software developer focused on building
+				high-impact applications.
+			</p>
+		</div>
+	</section>
+	<section id="featured-experience">
+		<h2>What I'm Up To</h2>
+		<p>
+			Currently, I work as a Software Engineering Intern for UCSD IT Services
+			as part of the Academic Innovation team. I work on a diverse set of
+			projects across the backend and devops spheres. In this role, I've
+			become comfortable working with Docker, Kubernetes, and other devops tools
+			to manage platforms and applications that support thousands of people.
+			I've also worked on scripting tasks to improve CI/CD pipelines as well
+			as refactoring python clients to central error handling and reduce code
+			duplication. In this position, I work on an agile team and understand
+			principles that allow for successful projects and teams.
+		</p>
+	</section>
+	<section id="featured-projects">
+		<h2>Featured Projects</h2>
+		<div class="project-card-container">
+			<ProjectCard
+				href="/projects"
+				imgSrc="/assets/medium/fundraising-1.png"
+				imgSrcSet="/assets/small/fundraising-1.png 400w, /assets/medium/fundraising-1.png 800w, /assets/large/fundraising-1.png 1200w"
+				imgSizes="(min-width: 768px) 33vw, 100vw"
+				imgAlt="Screenshot of Fundraising CRM"
+				title="Non Profit CRM"
+				bgColor="#BFDBFE"
+			/>
+			<ProjectCard
+				href="/projects"
+				imgSrc="/assets/medium/claimable-1.png"
+				imgSrcSet="/assets/small/claimable-1.png 400w, /assets/medium/claimable-1.png 800w, /assets/large/claimable-1.png 1200w"
+				imgSizes="(min-width: 768px) 33vw, 100vw"
+				imgAlt="Screenshot of Claimable AI"
+				title="Claimable AI"
+				bgColor="#A7F3D0"
+				transitionName="project-claimable"
+			/>
+			<ProjectCard
+				href="/projects"
+				imgSrc="/assets/medium/fulfill-1.png"
+				imgSrcSet="/assets/small/fulfill-1.png 400w, /assets/medium/fulfill-1.png 800w, /assets/large/fulfill-1.png 1200w"
+				imgSizes="(min-width: 768px) 33vw, 100vw"
+				imgAlt="Screenshot of Fulfill AI"
+				title="Fulfill AI"
+				bgColor="#FDE68A"
+			/>
+		</div>
+	</section>
+</BaseLayout>

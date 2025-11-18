@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FaqItem from '../components/FaqItem.astro';
+---
+<BaseLayout title="About - Nikhil Akiti">
+	<section class="page-title-section">
+		<h1>About Me</h1>
+		<p>An insight into my motivations and philosophies</p>
+	</section>
+	<section class="faq-section">
+		<FaqItem question="What are you most passionate about in software development?">
+			<p>
+				I'm most passionate about building high-impact applications that are
+				both user-friendly and scalable. I love the challenge of designing
+				complex systems and seeing them come to life, especially when they
+				solve a real-world problem.
+			</p>
+		</FaqItem>
+
+		<FaqItem question="What kind of roles are you currently looking for?">
+			<p>
+				I am actively seeking software engineering intern roles where I can
+				contribute to a challenging project, learn from experienced mentors,
+				and apply my skills in full-stack development. I'm particularly
+				interested in companies working with modern web technologies like
+				React, Node.js, and Kubernetes.
+			</p>
+		</FaqItem>
+
+		<FaqItem question="Outside of code, what are your interests?">
+			<p>
+				When I'm not at my computer, I enjoy swimming, running, and biking as
+				part of the UCSD Triathalon team. I also like to spend my time
+				playing guitar and chess.
+			</p>
+		</FaqItem>
+	</section>
+</BaseLayout>

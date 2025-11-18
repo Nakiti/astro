@@ -1,0 +1,20 @@
+---
+export interface Props {
+    role: string;
+    company: string;
+    date: string;
+}
+const { role, company, date } = Astro.props;
+---
+<experience-card class="experience-card">
+    <header class="experience-header">
+        <h2 class="experience-role">{role}</h2>
+        <h3 class="experience-company">{company}</h3>
+        <p class="experience-date"><i>{date}</i></p>
+    </header>
+    <div class="experience-details">
+        <ul>
+            <slot /> 
+        </ul>
+    </div>
+</experience-card>

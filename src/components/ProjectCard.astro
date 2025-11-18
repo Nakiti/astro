@@ -1,0 +1,35 @@
+---
+export interface Props {
+	href: string;
+	imgSrc: string;
+	imgSrcSet: string;
+	imgSizes: string;
+	imgAlt: string;
+	title: string;
+	bgColor: string;
+	transitionName?: string; 
+}
+
+const { 
+	href, imgSrc, imgSrcSet, imgSizes, imgAlt, 
+	title, bgColor, transitionName 
+} = Astro.props;
+---
+<a 
+	href={href} 
+	class="project-card-link"
+	transition:name={transitionName}
+>
+	<article class="project-card">
+		<img
+			class="project-card-image"
+			src={imgSrc}
+			srcset={imgSrcSet}
+			sizes={imgSizes}
+			alt={imgAlt}
+		/>
+		<div class="project-card-title-bar" style={`background-color: ${bgColor}`}>
+			<h3>{title}</h3>
+		</div>
+	</article>
+</a>
